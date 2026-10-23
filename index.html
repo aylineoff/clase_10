@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>HTML, SVG, CSS Y JS</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <style>
+        body {
+        font-family: "Monsera"</style>
+    </head>
+    <body>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 580"
+     font-family="Montserrat, Helvetica, Arial, sans-serif"
+     onclick="alert('What?!')">
+
+  <style>
+    .grid  { fill: none; stroke: lightgray; }
+    .axis  { stroke: #000; }
+    .label { font-size: 12px; text-anchor: middle; dominant-baseline: middle; }
+    .tick  { font-size: 10px; text-anchor: end; dominant-baseline: middle; }
+    .area  { fill-opacity: 0.2; transition: all ease .4s; }
+    .area:hover { fill-opacity: 0.4; transition: all ease .4s; }
+    .legend-text  { font-size: 10px; }
+    .legend-title { font-size: 12px; font-weight: bold; }
+  </style>
+
+  <g transform="translate(300 300)">
+    <g class="grid">
+      <circle r="24"/>
+      <circle r="48"/>
+      <circle r="72"/>
+      <circle r="96"/>
+      <circle r="120"/>
+      <circle r="144"/>
+      <circle r="168"/>
+      <circle r="192"/>
+      <circle r="216"/>
+      <circle r="240"/>
+    </g>
+    <g class="axis">
+      <line x2="0.0" y2="-240.0"/>
+      <line x2="228.3" y2="-74.2"/>
+      <line x2="141.1" y2="194.2"/>
+      <line x2="-141.1" y2="194.2"/>
+      <line x2="-228.3" y2="-74.2"/>
+    </g>
+    <g>
+      <text class="label" x="0.0" y="-250.0">Staff with PhD</text>
+      <text class="label" x="237.8" y="-77.3">International Research Network</text>
+      <text class="label" x="146.9" y="202.3">Papers Per Faculty</text>
+      <text class="label" x="-146.9" y="202.3">Citations per Paper</text>
+      <text class="label" x="-237.8" y="-77.3">Faculty Student</text>
+    </g>
+    <g class="tick">
+      <path class="axis" fill="none" d="M-6-240H0V0H-6"/>
+      <text x="-9" y="0">0</text>
+      <text x="-9" y="-24">10</text>
+      <text x="-9" y="-48">20</text>
+      <text x="-9" y="-72">30</text>
+      <text x="-9" y="-96">40</text>
+      <text x="-9" y="-120">50</text>
+      <text x="-9" y="-144">60</text>
+      <text x="-9" y="-168">70</text>
+      <text x="-9" y="-192">80</text>
+      <text x="-9" y="-216">90</text>
+      <text x="-9" y="-240">100</text>
+    </g>
+
+    <!-- Series -->
+    <g fill="#1f77b4" stroke="#1f77b4">
+      <polygon class="area" points="0.0,-236.6 227.4,-73.9 137.6,189.4 -109.4,150.6 -164.2,-53.3"/>
+      <circle cx="0.0" cy="-236.6" r="1.5" stroke="none"/>
+      <circle cx="227.4" cy="-73.9" r="1.5" stroke="none"/>
+      <circle cx="137.6" cy="189.4" r="1.5" stroke="none"/>
+      <circle cx="-109.4" cy="150.6" r="1.5" stroke="none"/>
+      <circle cx="-164.2" cy="-53.3" r="1.5" stroke="none"/>
+    </g>
+    <g fill="#ff7f0e" stroke="#ff7f0e">
+      <polygon class="area" points="0.0,-172.6 227.4,-73.9 140.5,193.5 -108.4,149.2 -52.9,-17.2"/>
+      <circle cx="0.0" cy="-172.6" r="1.5" stroke="none"/>
+      <circle cx="227.4" cy="-73.9" r="1.5" stroke="none"/>
+      <circle cx="140.5" cy="193.5" r="1.5" stroke="none"/>
+      <circle cx="-108.4" cy="149.2" r="1.5" stroke="none"/>
+      <circle cx="-52.9" cy="-17.2" r="1.5" stroke="none"/>
+    </g>
+    <g fill="#2ca02c" stroke="#2ca02c">
+      <polygon class="area" points="0.0,-153.3 225.8,-73.3 126.2,173.7 -124.2,171.0 -85.7,-27.9"/>
+      <circle cx="0.0" cy="-153.3" r="1.5" stroke="none"/>
+      <circle cx="225.8" cy="-73.3" r="1.5" stroke="none"/>
+      <circle cx="126.2" cy="173.7" r="1.5" stroke="none"/>
+      <circle cx="-124.2" cy="171.0" r="1.5" stroke="none"/>
+      <circle cx="-85.7" cy="-27.9" r="1.5" stroke="none"/>
+    </g>
+    <g fill="#d62728" stroke="#d62728">
+      <polygon class="area" points="0.0,-70.7 223.4,-72.6 114.4,157.4 -86.2,118.6 -68.0,-22.1"/>
+      <circle cx="0.0" cy="-70.7" r="1.5" stroke="none"/>
+      <circle cx="223.4" cy="-72.6" r="1.5" stroke="none"/>
+      <circle cx="114.4" cy="157.4" r="1.5" stroke="none"/>
+      <circle cx="-86.2" cy="118.6" r="1.5" stroke="none"/>
+      <circle cx="-68.0" cy="-22.1" r="1.5" stroke="none"/>
+    </g>
+  </g>
+
+  <!-- Leyenda -->
+  <g transform="translate(605 60)">
+    <text class="legend-title">Nombre Institucion</text>
+    <rect y="16.0" width="15" height="15" fill="#1f77b4"/>
+    <text class="legend-text" x="20" y="28.5">Pontificia Universidad Católica de Chile (PUC)</text>
+    <rect y="37.25" width="15" height="15" fill="#ff7f0e"/>
+    <text class="legend-text" x="20" y="49.75">Universidad de Chile (UCH)</text>
+    <rect y="58.5" width="15" height="15" fill="#2ca02c"/>
+    <text class="legend-text" x="20" y="71.0">Universidad de Concepción (UDeC)</text>
+    <rect y="79.75" width="15" height="15" fill="#d62728"/>
+    <text class="legend-text" x="20" y="92.25">Universidad de Santiago de Chile (USACH)</text>
+  </g>
+</svg>
+
+</body>
+</html>
